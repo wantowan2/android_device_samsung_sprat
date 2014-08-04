@@ -71,4 +71,5 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_INITRC := device/samsung/sprat/recovery/init.rc
 TW_TARGET_USES_QCOM_BSP := true
-TW_NO_SCREEN_BLANK := true
+#TW_NO_SCREEN_BLANK := true
+TW_BRIGHTNESS_PATH := "/sys/devices/fd900000.qcom\x2cmdss_mdp/qcom\x2cmdss_fb_primary.145/leds/lcd-backlight/brightness"
