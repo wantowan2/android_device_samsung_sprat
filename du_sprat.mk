@@ -18,24 +18,24 @@
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
 # Get the prebuilt list of APNs
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/du/config/gsm.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/du/config/common.mk)
 
 PRODUCT_PACKAGES += \
     charger_res_images \
     charger
 
-#PRODUCT_COPY_FILES += \
-#    device/samsung/sprat/kernel:kernel
+PRODUCT_COPY_FILES += \
+    device/samsung/sprat/kernel:kernel
 
 PRODUCT_COPY_FILES += device/samsung/sprat/fstab.sprat:recovery/root/fstab.sprat
 
-PRODUCT_NAME := omni_sprat
+PRODUCT_NAME := du_sprat
 PRODUCT_DEVICE := sprat
 PRODUCT_BRAND := Samsung
 PRODUCT_MODEL := Gear Live
@@ -43,5 +43,5 @@ PRODUCT_MANUFACTURER := Samsung
 
 # Kernel inline build
 
-#TARGET_VARIANT_CONFIG := sprat_defconfig
-#TARGET_SELINUX_CONFIG := sprat_defconfig
+TARGET_VARIANT_CONFIG := sprat_defconfig
+TARGET_SELINUX_CONFIG := sprat_defconfig
