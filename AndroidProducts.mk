@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_sprat.mk
+    $(LOCAL_DIR)/du_sprat.mk
